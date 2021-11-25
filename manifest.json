@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "YouTube Dislike Fixer",
+    "version": "1.0",
+    "description": "Fixes YouTube's Dislike Button (Till Dec 13).",
+    "icons": { "16": "icon.png",
+        "48": "icon.png",
+       "128": "icon.png" },
+    "content_scripts":[
+        {
+            "matches": ["*://www.youtube.com/*"],
+            "js": ["main.js"]
+        }
+    ],
+    "permissions": [
+        "storage", 
+        "activeTab", 
+        "declarativeContent",
+        "webRequest", 
+        "webRequestBlocking", 
+        "webNavigation",
+        "https://mixerno.space/api/youtube-video-counter/user/*"
+      ]
+}
